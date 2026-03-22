@@ -1,0 +1,16 @@
+{
+  "name": "Team_Repo_OpenClaw_Assistant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.32.1",
+  "devDependencies": {
+    "vitest": "^4.1.0"
+  }
+}
