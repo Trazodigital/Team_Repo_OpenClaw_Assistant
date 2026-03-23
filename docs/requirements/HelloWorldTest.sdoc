@@ -1,0 +1,13 @@
+[DOCUMENT]
+TITLE: HelloWorldTest - Feature Requirements
+
+[[SECTION]]
+TITLE: Hello World Feature
+
+[REQUIREMENT]
+UID: REQ-HW-001
+STATUS: Active
+TITLE: Hello World Greeting
+STATEMENT: The system shall provide a function that returns the greeting "Hello, World!".
+
+[[/SECTION]]
