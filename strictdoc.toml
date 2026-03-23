@@ -1,5 +1,0 @@
-[project]
-title = "OpenClaw Assistant - Requirements"
-
-[server]
-output_path = "output"

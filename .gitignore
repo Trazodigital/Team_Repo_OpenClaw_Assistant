@@ -7,3 +7,6 @@ dist/
 
 # StrictDoc output
 output/
+
+# Test reports
+reports/
