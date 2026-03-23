@@ -1,0 +1,119 @@
+[DOCUMENT]
+TITLE: OpenClaw Assistant - System Requirements
+
+[[SECTION]]
+TITLE: Introduction
+
+[TEXT]
+STATEMENT: >>>
+This document describes the system requirements for the OpenClaw Assistant project (Proyecto consultorios IA).
+
+Team members:
+- Alejandro Becerril Bernal
+- Octavio Becerril Olivares
+<<<
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Functional Requirements
+
+[REQUIREMENT]
+UID: REQ-FUNC-001
+STATUS: Draft
+TITLE: Placeholder Functional Requirement
+STATEMENT: >>>
+This is a placeholder requirement. Replace with actual functional requirements.
+<<<
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Non-Functional Requirements
+
+[REQUIREMENT]
+UID: REQ-NFR-001
+STATUS: Draft
+TITLE: Placeholder Non-Functional Requirement
+STATEMENT: >>>
+This is a placeholder requirement. Replace with actual non-functional requirements.
+<<<
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Technical Stack Requirements
+
+[REQUIREMENT]
+UID: REQ-TECH-001
+STATUS: Active
+TITLE: Programming Language
+STATEMENT: The system shall be developed using TypeScript.
+
+[REQUIREMENT]
+UID: REQ-TECH-002
+STATUS: Active
+TITLE: Runtime Environment
+STATEMENT: The system shall run on Node.js version 22 or higher.
+
+[REQUIREMENT]
+UID: REQ-TECH-003
+STATUS: Active
+TITLE: Package Manager
+STATEMENT: The project shall use PNPM with Workspace support for dependency management.
+
+[REQUIREMENT]
+UID: REQ-TECH-004
+STATUS: Active
+TITLE: Build Tooling
+STATEMENT: The project shall use Tsdown as the bundler.
+
+[REQUIREMENT]
+UID: REQ-TECH-005
+STATUS: Active
+TITLE: Code Quality - Linter
+STATEMENT: The project shall use Oxlint for linting.
+
+[REQUIREMENT]
+UID: REQ-TECH-006
+STATUS: Active
+TITLE: Code Quality - Formatter
+STATEMENT: The project shall use Oxfmt for code formatting.
+
+[REQUIREMENT]
+UID: REQ-TECH-007
+STATUS: Active
+TITLE: Testing
+STATEMENT: The project shall use Vitest as the test runner.
+
+[REQUIREMENT]
+UID: REQ-TECH-008
+STATUS: Active
+TITLE: CI/CD
+STATEMENT: The project shall use GitHub Actions for continuous integration and deployment.
+
+[REQUIREMENT]
+UID: REQ-TECH-009
+STATUS: Active
+TITLE: Version Control
+STATEMENT: The project shall use GitHub for version control.
+
+[REQUIREMENT]
+UID: REQ-TECH-010
+STATUS: Active
+TITLE: Task Management
+STATEMENT: The project shall use GitHub Issues and GitHub Projects for task management.
+
+[REQUIREMENT]
+UID: REQ-TECH-011
+STATUS: Active
+TITLE: Documentation
+STATEMENT: The project shall use the GitHub Repository Wiki for documentation.
+
+[REQUIREMENT]
+UID: REQ-TECH-012
+STATUS: Active
+TITLE: Requirements Engineering
+STATEMENT: The project shall use StrictDoc for requirements engineering.
+
+[[/SECTION]]
