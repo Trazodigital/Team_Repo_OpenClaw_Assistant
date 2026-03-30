@@ -77,11 +77,11 @@ This project uses a traceability pipeline that connects **requirements**, **sour
 
 ### 1.2 Pipeline Steps
 
-| Step | Command | Description |
-|------|---------|-------------|
-| **Run tests** | `pnpm test` | Executes Vitest and generates `reports/junit.vitest.xml` |
-| **Export docs** | `.venv/bin/strictdoc export docs/requirements --output-dir output` | Generates static HTML with traceability matrix |
-| **Interactive server** | `.venv/bin/strictdoc server docs/requirements` | Starts a local web UI for authoring and reviewing requirements |
+| Step                   | Command                                                            | Description                                                    |
+| ---------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------- |
+| **Run tests**          | `pnpm test`                                                        | Executes Vitest and generates `reports/junit.vitest.xml`       |
+| **Export docs**        | `.venv/bin/strictdoc export docs/requirements --output-dir output` | Generates static HTML with traceability matrix                 |
+| **Interactive server** | `.venv/bin/strictdoc server docs/requirements`                     | Starts a local web UI for authoring and reviewing requirements |
 
 ### 1.3 How Traceability Works
 
