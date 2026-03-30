@@ -1,0 +1,38 @@
+[DOCUMENT]
+TITLE: OpenClaw Assistant - Requirements Index
+
+[[SECTION]]
+TITLE: Scope
+
+[TEXT]
+STATEMENT: >>>
+Describe the system scope, users, and boundaries for this project.
+<<<
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Functional Requirements
+
+[REQUIREMENT]
+UID: REQ-FUNC-001
+STATUS: Draft
+TITLE: Example Functional Requirement
+STATEMENT: >>>
+The system shall transcribe medical voice notes into structured text.
+<<<
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Non-Functional Requirements
+
+[REQUIREMENT]
+UID: REQ-NFR-001
+STATUS: Draft
+TITLE: Example Non-Functional Requirement
+STATEMENT: >>>
+The system shall run on Node.js version 22 or higher.
+<<<
+
+[[/SECTION]]

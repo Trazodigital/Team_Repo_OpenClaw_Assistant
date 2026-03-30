@@ -1,0 +1,38 @@
+[DOCUMENT]
+TITLE: OpenClaw Assistant - Requirements
+
+[[SECTION]]
+TITLE: Overview
+
+[TEXT]
+STATEMENT: >>>
+Describe the project scope, objectives, and stakeholders for this requirements set.
+<<<
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Functional Requirements
+
+[REQUIREMENT]
+UID: REQ-FUNC-001
+STATUS: Draft
+TITLE: Example Functional Requirement
+STATEMENT: >>>
+The system shall transcribe medical voice input into structured text.
+<<<
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Non-Functional Requirements
+
+[REQUIREMENT]
+UID: REQ-NFR-001
+STATUS: Draft
+TITLE: Example Non-Functional Requirement
+STATEMENT: >>>
+The system shall run on Node.js 22 or higher.
+<<<
+
+[[/SECTION]]

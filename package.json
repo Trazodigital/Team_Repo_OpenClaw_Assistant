@@ -1,10 +1,18 @@
 {
-  "name": "Team_Repo_OpenClaw_Assistant",
+  "name": "team-repo-openclaw-assistant",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "test": "vitest run"
+    "build": "tsdown",
+    "lint": "oxlint .",
+    "format": "prettier --check .",
+    "test": "vitest run",
+    "strictdoc:serve": "strictdoc server requirements"
   },
   "keywords": [],
   "author": "",
