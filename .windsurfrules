@@ -8,3 +8,9 @@
 ## Code Generation
 - When asked to generate features for the API, first review the types and prompts exported by `@team/openclaw-context`.
 - Strictly follow TypeScript interfaces.
+
+## Tooling
+- This project uses prettier for formatting and oxlint for linting.
+- Never replace or remove prettier. The format script is `prettier --write .` 
+- Always run `pnpm format` before any `git commit`.
+- Always run `pnpm install` after modifying any `package.json`.

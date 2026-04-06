@@ -61,19 +61,19 @@ Team_Repo_OpenClaw_Assistant/
 
 Each subdirectory is a standalone PNPM workspace package.
 
-| Package | Name | Purpose |
-|---------|------|---------|
+| Package     | Name        | Purpose                                                                                                                                                                                         |
+| ----------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `apps/api/` | `@team/api` | Back-end API service. Contains the server entry point and business logic. Currently bootstrapped with a `HelloWorldTest.ts` placeholder. Built with **tsdown** and runnable via `node --watch`. |
-| `apps/web/` | `@team/web` | Front-end web application. Scaffold is in place; implementation is pending. |
+| `apps/web/` | `@team/web` | Front-end web application. Scaffold is in place; implementation is pending.                                                                                                                     |
 
 ### `packages/` — Shared Libraries
 
 Reusable packages consumed by the applications via PNPM workspace protocol.
 
-| Package | Name | Purpose |
-|---------|------|---------|
-| `packages/config/` | `@team/config` | Centralized, shared configuration (feature flags, constants, environment helpers). Currently a placeholder (`.gitkeep`). |
-| `packages/openclaw-context/` | `@team/openclaw-context` | Core domain logic for OpenClaw — medical context models, prompt schemas, and voice-to-text processing utilities. |
+| Package                      | Name                     | Purpose                                                                                                                  |
+| ---------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `packages/config/`           | `@team/config`           | Centralized, shared configuration (feature flags, constants, environment helpers). Currently a placeholder (`.gitkeep`). |
+| `packages/openclaw-context/` | `@team/openclaw-context` | Core domain logic for OpenClaw — medical context models, prompt schemas, and voice-to-text processing utilities.         |
 
 ### `requirements/` — StrictDoc Requirements
 
@@ -105,17 +105,17 @@ Tests are executed with **Vitest** (`pnpm test`). Per-app tests can also live in
 
 ## Key Root Files
 
-| File | Description |
-|------|-------------|
-| **`package.json`** | Root workspace package. Defines shared `devDependencies` (TypeScript 5.9, Vitest 4, OxLint, Prettier, Husky, tsdown), `engines` (Node ≥ 22), `packageManager` (pnpm@10.32.1), and workspace-level scripts (`build`, `lint`, `format`, `test`, `strictdoc:serve`). |
-| **`pnpm-workspace.yaml`** | Declares the monorepo workspace globs: `apps/*` and `packages/*`. |
-| **`tsconfig.json`** | Root TypeScript configuration targeting ES2022 with NodeNext module resolution. Includes source from `apps/*/src`, `packages/*/src`, `tests/`, and root `*.ts` files. |
-| **`tsdown.config.ts`** | Bundler configuration. Produces ESM and CJS outputs with type declarations for the API entry point. |
-| **`vitest.config.ts`** | Test runner configuration. Uses the Node environment, collects tests from apps, packages, and the root `tests/` directory, and generates V8 coverage reports (text + lcov). |
-| **`strictdoc_config.py`** | StrictDoc project settings. Enables requirement-to-source traceability, the traceability screen, and search. Configures the source root and `.sdoc` include paths. |
-| **`requirements-strictdoc.txt`** | Python pip requirements file pinning StrictDoc ≥ 0.19.0 for the traceability pipeline. |
-| **`.env.example`** | Template for local environment variables (`NODE_ENV`, `PORT`, `DATABASE_URL`, `API_KEY`). Actual `.env` files are git-ignored. |
-| **`REQUIREMENTS_SPEC.md`** | Comprehensive documentation of the requirements traceability pipeline (StrictDoc + Vitest + JUnit XML). |
-| **`SECURITY.md`** | Security policy — vulnerability reporting via GitHub Private Advisories, response SLAs, and security practices (secret scanning, Dependabot, no secrets in code). |
-| **`README.md`** | Project overview with CI status badge. |
-| **`.gitignore`** | Ignores build artifacts (`dist/`, `build/`), `node_modules/`, Python virtual environments, coverage reports, StrictDoc output, logs, and IDE settings. |
+| File                             | Description                                                                                                                                                                                                                                                       |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`package.json`**               | Root workspace package. Defines shared `devDependencies` (TypeScript 5.9, Vitest 4, OxLint, Prettier, Husky, tsdown), `engines` (Node ≥ 22), `packageManager` (pnpm@10.32.1), and workspace-level scripts (`build`, `lint`, `format`, `test`, `strictdoc:serve`). |
+| **`pnpm-workspace.yaml`**        | Declares the monorepo workspace globs: `apps/*` and `packages/*`.                                                                                                                                                                                                 |
+| **`tsconfig.json`**              | Root TypeScript configuration targeting ES2022 with NodeNext module resolution. Includes source from `apps/*/src`, `packages/*/src`, `tests/`, and root `*.ts` files.                                                                                             |
+| **`tsdown.config.ts`**           | Bundler configuration. Produces ESM and CJS outputs with type declarations for the API entry point.                                                                                                                                                               |
+| **`vitest.config.ts`**           | Test runner configuration. Uses the Node environment, collects tests from apps, packages, and the root `tests/` directory, and generates V8 coverage reports (text + lcov).                                                                                       |
+| **`strictdoc_config.py`**        | StrictDoc project settings. Enables requirement-to-source traceability, the traceability screen, and search. Configures the source root and `.sdoc` include paths.                                                                                                |
+| **`requirements-strictdoc.txt`** | Python pip requirements file pinning StrictDoc ≥ 0.19.0 for the traceability pipeline.                                                                                                                                                                            |
+| **`.env.example`**               | Template for local environment variables (`NODE_ENV`, `PORT`, `DATABASE_URL`, `API_KEY`). Actual `.env` files are git-ignored.                                                                                                                                    |
+| **`REQUIREMENTS_SPEC.md`**       | Comprehensive documentation of the requirements traceability pipeline (StrictDoc + Vitest + JUnit XML).                                                                                                                                                           |
+| **`SECURITY.md`**                | Security policy — vulnerability reporting via GitHub Private Advisories, response SLAs, and security practices (secret scanning, Dependabot, no secrets in code).                                                                                                 |
+| **`README.md`**                  | Project overview with CI status badge.                                                                                                                                                                                                                            |
+| **`.gitignore`**                 | Ignores build artifacts (`dist/`, `build/`), `node_modules/`, Python virtual environments, coverage reports, StrictDoc output, logs, and IDE settings.                                                                                                            |
