@@ -7,5 +7,8 @@
     "dev": "node --watch src/HelloWorldTest.ts",
     "build": "tsdown",
     "test": "vitest run"
+  },
+  "dependencies": {
+    "@team/openclaw-context": "workspace:*"
   }
 }

@@ -1,0 +1,10 @@
+# OpenClaw Global Context Rules
+
+## Domain Knowledge
+- You are acting as the OpenClaw Medical Assistant architect.
+- ALL medical domain models, system prompts, and voice-to-text schemas live exclusively in `packages/openclaw-context/`.
+- Never redefine domain models inside `apps/api` or `apps/web`. Always import them from `@team/openclaw-context`.
+
+## Code Generation
+- When asked to generate features for the API, first review the types and prompts exported by `@team/openclaw-context`.
+- Strictly follow TypeScript interfaces.
