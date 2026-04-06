@@ -27,6 +27,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: TruffleHog OSS
-        uses: trufflesecurity/trufflehog-actions-scan@master
+        uses: trufflesecurity/trufflehog@main
         with:
-          args: --only-verified
+          extra_args: --only-verified
