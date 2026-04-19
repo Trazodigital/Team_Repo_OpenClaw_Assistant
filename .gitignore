@@ -1,13 +1,22 @@
-node_modules/
+.env
+.env.*
+!.env.example
 dist/
+build/
+out/
+*.tsbuildinfo
+node_modules/
+.pnpm-store/
+coverage/
+.nyc_output/
 .DS_Store
-
-# Python virtual environment
-.venv/
-__pycache__/
-
-# StrictDoc output
+.vscode/settings.json
+.idea/
+strictdoc_build/
 output/
-
-# Test reports
-reports/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.log
+logs/

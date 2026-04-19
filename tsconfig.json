@@ -12,6 +12,6 @@
     "declaration": true,
     "outDir": "dist"
   },
-  "include": ["src", "tests", "*.ts"],
+  "include": ["apps/*/src/**/*", "packages/*/src/**/*", "tests/**/*", "*.ts"],
   "exclude": ["dist", "node_modules"]
 }
