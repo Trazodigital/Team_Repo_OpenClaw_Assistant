@@ -20,3 +20,7 @@ __pycache__/
 venv/
 *.log
 logs/
+apps/openclaw/models/
+*.bin
+*.pt
+.claude/

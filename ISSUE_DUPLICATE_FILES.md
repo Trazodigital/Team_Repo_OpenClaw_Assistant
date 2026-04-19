@@ -4,23 +4,24 @@ After pulling the latest changes, the following duplications and conflicts were 
 
 ## 1. StrictDoc Configuration — Two Config Files
 
-| File | Format | Source Root | Notes |
-|------|--------|-------------|-------|
-| `strictdoc.toml` (project root) | TOML | `.` (looks in `/requirements/`) | Added in `4b15d6a` |
-| `docs/requirements/strictdoc_config.py` | Python | `../../` (project root) | Added earlier, includes `exclude_source_paths` |
+| File                                    | Format | Source Root                     | Notes                                          |
+| --------------------------------------- | ------ | ------------------------------- | ---------------------------------------------- |
+| `strictdoc.toml` (project root)         | TOML   | `.` (looks in `/requirements/`) | Added in `4b15d6a`                             |
+| `docs/requirements/strictdoc_config.py` | Python | `../../` (project root)         | Added earlier, includes `exclude_source_paths` |
 
 **Action needed:** Decide which config format and location to keep. StrictDoc v0.19 supports both TOML and Python, but Python is the recommended path forward (TOML is being deprecated in 2026-Q1). Only one should remain.
 
 ## 2. Requirements Documents — Two Index Files + Two Sets of Requirements
 
-| File | Content |
-|------|---------|
-| `requirements/index.sdoc` | Requirements index at project root |
-| `docs/requirements/index.sdoc` | Requirements index under `docs/` |
-| `docs/requirements/requirements.sdoc` | System requirements (functional, non-functional, tech stack) |
-| `docs/requirements/HelloWorldTest.sdoc` | HelloWorldTest feature requirement |
+| File                                    | Content                                                      |
+| --------------------------------------- | ------------------------------------------------------------ |
+| `requirements/index.sdoc`               | Requirements index at project root                           |
+| `docs/requirements/index.sdoc`          | Requirements index under `docs/`                             |
+| `docs/requirements/requirements.sdoc`   | System requirements (functional, non-functional, tech stack) |
+| `docs/requirements/HelloWorldTest.sdoc` | HelloWorldTest feature requirement                           |
 
 **Action needed:** Decide on a single canonical location for `.sdoc` files:
+
 - **Option A:** `requirements/` (root-level, referenced by `strictdoc.toml`)
 - **Option B:** `docs/requirements/` (referenced by `strictdoc_config.py`)
 

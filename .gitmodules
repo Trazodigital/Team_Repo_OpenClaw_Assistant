@@ -1,0 +1,3 @@
+[submodule "apps/openclaw"]
+	path = apps/openclaw
+	url = https://github.com/openclaw/openclaw
