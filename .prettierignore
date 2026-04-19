@@ -4,5 +4,4 @@ dist/
 build/
 node_modules/
 coverage/
-apps/openclaw/
 .claude/
