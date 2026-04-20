@@ -23,3 +23,6 @@ logs/
 *.bin
 *.pt
 .claude/
+
+# OpenClaw generated files
+hello-openclaw.txt
