@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="3" failures="0" errors="0" time="0.003597791">
+    <testsuite name="tests/HelloWorldTest.test.ts" timestamp="2026-03-23T20:57:03.487Z" hostname="alex-mac02.fritz.box" tests="1" failures="0" errors="0" skipped="0" time="0.001667333">
+        <testcase classname="tests/HelloWorldTest.test.ts" name="HelloWorldTest &gt; should return &quot;Hello, World!&quot;" time="0.000979042">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/sample.test.ts" timestamp="2026-03-23T20:57:03.487Z" hostname="alex-mac02.fritz.box" tests="2" failures="0" errors="0" skipped="0" time="0.001930458">
+        <testcase classname="tests/sample.test.ts" name="Test de ambiente &gt; debe sumar correctamente" time="0.001062167">
+        </testcase>
+        <testcase classname="tests/sample.test.ts" name="Test de ambiente &gt; debe confirmar que el ambiente está funcionando" time="0.000161042">
+        </testcase>
+    </testsuite>
+</testsuites>
