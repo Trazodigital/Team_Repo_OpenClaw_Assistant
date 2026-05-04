@@ -150,7 +150,9 @@ git branch -d feature/<task-name>
 
 #### Overview
 
-**OpenClaw Assistant** is an AI agent project focused on medical automation and speech-to-text processing. The source is organised as a **PNPM monorepo** (`pnpm@10.32.1`) with workspaces for applications and shared packages, a StrictDoc-based requirements traceability pipeline, and a fully automated CI workflow.
+This repository hosts the **framework and reference implementation** for developing **abilities** that integrate into the OpenClaw platform. Its purpose is to establish a consistent, AI-assisted development flow guided by the Quality Framework for AI-Assisted Development; concrete abilities (starting with a deliberately simple `hello-world` skill) are included as exemplars of the flow rather than as the project's primary deliverable.
+
+The source is organised as a **PNPM monorepo** (`pnpm@10.32.1`) with workspaces for applications and shared packages, a StrictDoc-based requirements traceability pipeline, and a fully automated CI workflow. The upstream OpenClaw codebase is integrated as a Git submodule under `vendor/openclaw/` (see § 3.2).
 
 **Requirements:** Node.js ≥ 22. TypeScript is the primary language across all packages.
 
@@ -209,6 +211,52 @@ Each subdirectory is an independent PNPM workspace package.
 | ----------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `apps/api/` | `@team/api` | Back-end API service. Contains the server entry point and business logic. Currently initialised with a `HelloWorldTest.ts` placeholder. Built with `tsdown`, run via `node --watch`. |
 | `apps/web/` | `@team/web` | Front-end web application. Skeleton in place; implementation pending.                                                                                                                |
+
+### 3.2 Integration of the upstream OpenClaw repository
+
+The upstream OpenClaw codebase — the public GitHub repository that defines the framework abilities are integrated into — is brought into this repository as a **Git submodule** under `vendor/openclaw/`.
+
+#### Why a submodule
+
+- The full upstream source is present in the working tree, so the IDE indexes it and AI-assisted coding can read it directly when generating or reviewing abilities.
+- The submodule is pinned to a specific commit, ensuring every team member works against the same upstream revision.
+- The vendored copy is read-only by convention — upstream code is never modified locally.
+
+#### Location
+
+```text
+03_Team_Repo_OpenClaw_Assistant/
+├── apps/
+├── packages/
+└── vendor/
+    └── openclaw/         # Git submodule → upstream OpenClaw repository
+```
+
+#### Setup (one-time, per clone)
+
+```bash
+git submodule add <openclaw-repo-url> vendor/openclaw
+git submodule update --init --recursive
+```
+
+After cloning the repository on a new machine:
+
+```bash
+git submodule update --init --recursive
+```
+
+#### Updating to a newer upstream revision
+
+```bash
+cd vendor/openclaw
+git fetch
+git checkout <commit-or-tag>
+cd ../..
+git add vendor/openclaw
+git commit -m "chore: bump vendor/openclaw to <commit-or-tag>"
+```
+
+> **Status:** the submodule is **not yet configured**. The upstream URL must be supplied and the `git submodule add` command run before this section becomes operational.
 
 ## 4. Monitoring & Controlling
 

@@ -66,29 +66,15 @@ This section maps how the six phases relate as a V-cycle and lists every activit
 
 #### V-cycle at a glance
 
-The classic V-cycle pairs each spec phase with the verification phase that proves it. Phase 6 sits below the V as the post-release feedback loop into the next iteration.
+The classic V-cycle pairs each specification phase with the verification phase that proves it. Phase 3 sits at the apex (the build); Phase 6 is the post-release feedback loop into the next iteration.
 
-```
-  ╔══════════════════════╗                                   ╔══════════════════════╗
-  ║ PHASE 1              ║ ◄────── verifies ────────────────►║ PHASE 5              ║
-  ║ Requirements         ║                                   ║ System Testing       ║
-  ╚══════════╤═══════════╝                                   ╚═══════════▲══════════╝
-             │                                                            │
-             ▼                                                            │
-  ╔══════════════════════╗                                   ╔══════════════════════╗
-  ║ PHASE 2              ║ ◄────── verifies ────────────────►║ PHASE 4              ║
-  ║ Design               ║                                   ║ Integration Testing  ║
-  ╚══════════╤═══════════╝                                   ╚═══════════▲══════════╝
-             │                                                            │
-             └─────────────────┐               ┌──────────────────────────┘
-                               ▼               │
-                       ╔══════════════════════╗
-                       ║ PHASE 3              ║
-                       ║ Implementation       ║
-                       ╚══════════════════════╝
+| Specification (descending) |         Build         |  Verification (ascending)  |
+| :------------------------: | :-------------------: | :------------------------: |
+|    **1. Requirements**     |         `<->`         |   **5. System Testing**    |
+|       **2. Design**        |         `<->`         | **4. Integration Testing** |
+|                            | **3. Implementation** |                            |
 
-  ┌─ PHASE 6: Operation ───── feedback loops back to Phase 1 (next iteration) ─┐
-```
+_Phase 6: Operation — production feedback loops back into Phase 1 of the next iteration._
 
 #### All activities in linear order
 
